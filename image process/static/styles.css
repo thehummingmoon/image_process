@@ -1,0 +1,55 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(pink.jpg);
+}
+
+header {
+    color: black;
+    padding: 10px 0;
+}
+
+nav#navbar ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav#navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav#navbar ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+#upload-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#images-display {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+.centered {
+    text-align: center; /* Align text center horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Center vertically within the viewport */
+}

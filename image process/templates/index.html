@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Processor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="upload-section">
+            <h2>Upload Your Image</h2>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <input type="file" id="imageInput" accept="image/*">
+                <button type="button" id="uploadButton">Upload Image</button>
+            </form>
+        </section>
+        <section id="images-display">
+            <div class="image-container">
+                <h3>Original Image</h3>
+                <img id="originalImage" src="#" alt="Original Image" style="display:none;">
+            </div>
+            <div class="image-container">
+                <h3>Processed Image</h3>
+                <img id="processedImage" src="#" alt="Processed Image" style="display:none;">
+            </div>
+        </section>
+        <section id="result-section" class="centered" style="display:none;">
+            <h3>Number of Vehicles Detected:</h3>
+            <p id="numCars"></p>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/opencv@7.0.0/lib/opencv.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
